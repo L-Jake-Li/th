@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的GitHub网页</title>
+    <style>
+        /* 基础样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f7fa;
+        }
+        
+        /* 全屏背景图 */
+        .hero {
+            height: 100vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 700px;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #388E3C;
+        }
+        
+        /* 内容区域 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            color: #2c3e50;
+        }
+        
+        /* 图片展示区域 */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .card-content {
+            padding: 20px;
+        }
+        
+        .card h3 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        /* 页脚 */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 60px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 英雄区域带背景图 -->
+    <section class="hero">
+        <h1>欢迎来到我的网站</h1>
+        <p>这是一个使用GitHub Pages部署的静态网页示例</p>
+        <a href="#content" class="btn">了解更多</a>
+    </section>
+    
+    <!-- 内容区域 -->
+    <div class="container" id="content">
+        <h2 class="section-title">精选图片展示</h2>
+        
+        <div class="gallery">
+            <!-- 图片卡片1 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b" alt="自然风景">
+                <div class="card-content">
+                    <h3>自然美景</h3>
+                    <p>大自然的壮丽景色总是让人心旷神怡，感受大自然的神奇与美丽。</p>
+                </div>
+            </div>
+            
+            <!-- 图片卡片2 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9" alt="城市风光">
+                <div class="card-content">
+                    <h3>城市风光</h3>
+                    <p>现代城市的繁华景象，高楼林立，展示人类文明的进步与发展。</p>
+                </div>
+            </div>
+            
+            <!-- 图片卡片3 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1504870712357-65ea720d6078" alt="海滩日落">
+                <div class="card-content">
+                    <h3>海滩日落</h3>
+                    <p>夕阳西下，海滩上的日落景色令人陶醉，享受宁静与美好时光。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 页脚 -->
+    <footer>
+        <p>© 2023 我的GitHub网页 - 使用GitHub Pages部署</p>
+    </footer>
+</body>
+</html>
